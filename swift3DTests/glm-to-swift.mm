@@ -9,9 +9,9 @@
 #include <algorithm>
 
 #import "glm-to-swift.h"
-#import "glm/glm.hpp"
-#import "glm/gtc/epsilon.hpp"
-#import "glm/gtc/matrix_transform.hpp"
+#import "glm/glm/glm.hpp"
+#import "glm/glm/gtc/epsilon.hpp"
+#import "glm/glm/gtc/matrix_transform.hpp"
 
 #pragma mark Helper functions
 
