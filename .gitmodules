@@ -1,0 +1,3 @@
+[submodule "swift3DTests/glm"]
+	path = swift3DTests/glm
+	url = https://github.com/g-truc/glm.git
