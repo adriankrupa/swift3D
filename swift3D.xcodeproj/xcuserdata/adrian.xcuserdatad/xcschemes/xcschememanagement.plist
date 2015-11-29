@@ -4,10 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>swift3D.xcscheme</key>
+		<key>swift3D-Mac.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>swift3D-iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -18,6 +23,76 @@
 			<true/>
 		</dict>
 		<key>3ABBC6261BE68FF500D563DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ABBC63B1BE6908E00D563DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ABBC6441BE6908E00D563DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ABBC6571BE690C100D563DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ABBC6601BE690C100D563DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ABBC6731BE6911600D563DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ABBC67C1BE6911600D563DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ABBC68F1BE691F100D563DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ABBC6981BE691F200D563DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ABBC6AB1BE6947300D563DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ABBC6B41BE6947300D563DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ABBC6C81BE695DA00D563DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ABBC6D11BE695DA00D563DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ABBC6E41BE696DB00D563DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ABBC6ED1BE696DB00D563DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

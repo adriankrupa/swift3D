@@ -7,43 +7,94 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3ABBC6211BE68FF500D563DF /* swift3D.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABBC6201BE68FF500D563DF /* swift3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3ABBC6281BE68FF500D563DF /* swift3D.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABBC61D1BE68FF500D563DF /* swift3D.framework */; };
-		3ABBC62D1BE68FF500D563DF /* swift3DTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBC62C1BE68FF500D563DF /* swift3DTests.swift */; };
+		3A559EF81BF7E54C00E76253 /* Exponential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A559EF71BF7E54C00E76253 /* Exponential.swift */; };
+		3A559EF91BF7E54C00E76253 /* Exponential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A559EF71BF7E54C00E76253 /* Exponential.swift */; };
+		3A559EFB1BF7FAFE00E76253 /* Geometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A559EFA1BF7FAFE00E76253 /* Geometric.swift */; };
+		3A559EFC1BF7FAFE00E76253 /* Geometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A559EFA1BF7FAFE00E76253 /* Geometric.swift */; };
+		3A559EFE1BF8064C00E76253 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A559EFD1BF8064C00E76253 /* Matrix.swift */; };
+		3A559EFF1BF8064C00E76253 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A559EFD1BF8064C00E76253 /* Matrix.swift */; };
+		3A559F011BF8158100E76253 /* Trigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A559F001BF8158100E76253 /* Trigonometric.swift */; };
+		3A559F021BF8158100E76253 /* Trigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A559F001BF8158100E76253 /* Trigonometric.swift */; };
+		3A9BBF671C07BBBA007AAC40 /* Matrix_Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9BBF661C07BBBA007AAC40 /* Matrix_Transform.swift */; };
+		3A9BBF681C07BBBA007AAC40 /* Matrix_Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9BBF661C07BBBA007AAC40 /* Matrix_Transform.swift */; };
+		3ABBC6CC1BE695DA00D563DF /* swift3D.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABBC6CB1BE695DA00D563DF /* swift3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3ABBC6D31BE695DA00D563DF /* swift3D.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABBC6C91BE695DA00D563DF /* swift3D.framework */; };
+		3ABBC6D81BE695DA00D563DF /* swift3DTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBC6D71BE695DA00D563DF /* swift3DTests.swift */; };
+		3ABBC6EF1BE696DB00D563DF /* swift3D.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABBC6E51BE696DB00D563DF /* swift3D.framework */; };
+		3ABBC6FC1BE6983600D563DF /* swift3DTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBC6D71BE695DA00D563DF /* swift3DTests.swift */; };
+		3ABBC6FD1BE6989900D563DF /* swift3D.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABBC6CB1BE695DA00D563DF /* swift3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3ABBC7021BE69B5900D563DF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBC7011BE69B5900D563DF /* Common.swift */; };
+		3ABBC7031BE69B5900D563DF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBC7011BE69B5900D563DF /* Common.swift */; };
+		3ABBC70B1BE69C2800D563DF /* glm-to-swift.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBC70A1BE69C2800D563DF /* glm-to-swift.mm */; };
+		3ABBC70C1BE69C2800D563DF /* glm-to-swift.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBC70A1BE69C2800D563DF /* glm-to-swift.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3ABBC6291BE68FF500D563DF /* PBXContainerItemProxy */ = {
+		3ABBC6D41BE695DA00D563DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3ABBC6141BE68FF500D563DF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3ABBC61C1BE68FF500D563DF;
+			remoteGlobalIDString = 3ABBC6C81BE695DA00D563DF;
+			remoteInfo = swift3D;
+		};
+		3ABBC6F01BE696DB00D563DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3ABBC6141BE68FF500D563DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3ABBC6E41BE696DB00D563DF;
 			remoteInfo = swift3D;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3ABBC61D1BE68FF500D563DF /* swift3D.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = swift3D.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3ABBC6201BE68FF500D563DF /* swift3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift3D.h; sourceTree = "<group>"; };
-		3ABBC6221BE68FF500D563DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3ABBC6271BE68FF500D563DF /* swift3DTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swift3DTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3ABBC62C1BE68FF500D563DF /* swift3DTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift3DTests.swift; sourceTree = "<group>"; };
-		3ABBC62E1BE68FF500D563DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A559EF71BF7E54C00E76253 /* Exponential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exponential.swift; sourceTree = "<group>"; };
+		3A559EFA1BF7FAFE00E76253 /* Geometric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometric.swift; sourceTree = "<group>"; };
+		3A559EFD1BF8064C00E76253 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		3A559F001BF8158100E76253 /* Trigonometric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigonometric.swift; sourceTree = "<group>"; };
+		3A9BBF661C07BBBA007AAC40 /* Matrix_Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix_Transform.swift; sourceTree = "<group>"; };
+		3ABBC6C91BE695DA00D563DF /* swift3D.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = swift3D.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ABBC6CB1BE695DA00D563DF /* swift3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift3D.h; sourceTree = "<group>"; };
+		3ABBC6CD1BE695DA00D563DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ABBC6D21BE695DA00D563DF /* swift3DTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swift3DTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ABBC6D71BE695DA00D563DF /* swift3DTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift3DTests.swift; sourceTree = "<group>"; };
+		3ABBC6D91BE695DA00D563DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ABBC6E51BE696DB00D563DF /* swift3D.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = swift3D.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ABBC6EE1BE696DB00D563DF /* swift3DTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swift3DTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ABBC6FE1BE6995900D563DF /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glm; sourceTree = "<group>"; };
+		3ABBC7011BE69B5900D563DF /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		3ABBC7071BE69C2700D563DF /* swift3DTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift3DTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		3ABBC7091BE69C2800D563DF /* glm-to-swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "glm-to-swift.h"; sourceTree = "<group>"; };
+		3ABBC70A1BE69C2800D563DF /* glm-to-swift.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "glm-to-swift.mm"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3ABBC6191BE68FF500D563DF /* Frameworks */ = {
+		3ABBC6C51BE695DA00D563DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3ABBC6241BE68FF500D563DF /* Frameworks */ = {
+		3ABBC6CF1BE695DA00D563DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ABBC6281BE68FF500D563DF /* swift3D.framework in Frameworks */,
+				3ABBC6D31BE695DA00D563DF /* swift3D.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ABBC6E11BE696DB00D563DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ABBC6EB1BE696DB00D563DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ABBC6EF1BE696DB00D563DF /* swift3D.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +104,8 @@
 		3ABBC6131BE68FF500D563DF = {
 			isa = PBXGroup;
 			children = (
-				3ABBC61F1BE68FF500D563DF /* swift3D */,
-				3ABBC62B1BE68FF500D563DF /* swift3DTests */,
+				3ABBC6CA1BE695DA00D563DF /* swift3D */,
+				3ABBC6D61BE695DA00D563DF /* swift3DTests */,
 				3ABBC61E1BE68FF500D563DF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,78 +113,150 @@
 		3ABBC61E1BE68FF500D563DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3ABBC61D1BE68FF500D563DF /* swift3D.framework */,
-				3ABBC6271BE68FF500D563DF /* swift3DTests.xctest */,
+				3ABBC6C91BE695DA00D563DF /* swift3D.framework */,
+				3ABBC6D21BE695DA00D563DF /* swift3DTests.xctest */,
+				3ABBC6E51BE696DB00D563DF /* swift3D.framework */,
+				3ABBC6EE1BE696DB00D563DF /* swift3DTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3ABBC61F1BE68FF500D563DF /* swift3D */ = {
+		3ABBC6CA1BE695DA00D563DF /* swift3D */ = {
 			isa = PBXGroup;
 			children = (
-				3ABBC6201BE68FF500D563DF /* swift3D.h */,
-				3ABBC6221BE68FF500D563DF /* Info.plist */,
+				3ABBC7011BE69B5900D563DF /* Common.swift */,
+				3A559EF71BF7E54C00E76253 /* Exponential.swift */,
+				3A559EFA1BF7FAFE00E76253 /* Geometric.swift */,
+				3A559EFD1BF8064C00E76253 /* Matrix.swift */,
+				3A559F001BF8158100E76253 /* Trigonometric.swift */,
+				3A9BBF661C07BBBA007AAC40 /* Matrix_Transform.swift */,
+				3ABBC6CB1BE695DA00D563DF /* swift3D.h */,
+				3ABBC6FF1BE6996800D563DF /* Supporting Files */,
 			);
 			path = swift3D;
 			sourceTree = "<group>";
 		};
-		3ABBC62B1BE68FF500D563DF /* swift3DTests */ = {
+		3ABBC6D61BE695DA00D563DF /* swift3DTests */ = {
 			isa = PBXGroup;
 			children = (
-				3ABBC62C1BE68FF500D563DF /* swift3DTests.swift */,
-				3ABBC62E1BE68FF500D563DF /* Info.plist */,
+				3ABBC6D71BE695DA00D563DF /* swift3DTests.swift */,
+				3ABBC7001BE6997700D563DF /* Supporting Files */,
+				3ABBC6FE1BE6995900D563DF /* glm */,
+				3ABBC7091BE69C2800D563DF /* glm-to-swift.h */,
+				3ABBC70A1BE69C2800D563DF /* glm-to-swift.mm */,
+				3ABBC7071BE69C2700D563DF /* swift3DTests-Bridging-Header.h */,
 			);
 			path = swift3DTests;
+			sourceTree = "<group>";
+		};
+		3ABBC6FF1BE6996800D563DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3ABBC6CD1BE695DA00D563DF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3ABBC7001BE6997700D563DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3ABBC6D91BE695DA00D563DF /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3ABBC61A1BE68FF500D563DF /* Headers */ = {
+		3ABBC6C61BE695DA00D563DF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ABBC6211BE68FF500D563DF /* swift3D.h in Headers */,
+				3ABBC6CC1BE695DA00D563DF /* swift3D.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ABBC6E21BE696DB00D563DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ABBC6FD1BE6989900D563DF /* swift3D.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3ABBC61C1BE68FF500D563DF /* swift3D */ = {
+		3ABBC6C81BE695DA00D563DF /* swift3D-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3ABBC6311BE68FF500D563DF /* Build configuration list for PBXNativeTarget "swift3D" */;
+			buildConfigurationList = 3ABBC6DA1BE695DA00D563DF /* Build configuration list for PBXNativeTarget "swift3D-Mac" */;
 			buildPhases = (
-				3ABBC6181BE68FF500D563DF /* Sources */,
-				3ABBC6191BE68FF500D563DF /* Frameworks */,
-				3ABBC61A1BE68FF500D563DF /* Headers */,
-				3ABBC61B1BE68FF500D563DF /* Resources */,
+				3ABBC6C41BE695DA00D563DF /* Sources */,
+				3ABBC6C51BE695DA00D563DF /* Frameworks */,
+				3ABBC6C61BE695DA00D563DF /* Headers */,
+				3ABBC6C71BE695DA00D563DF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = swift3D;
+			name = "swift3D-Mac";
 			productName = swift3D;
-			productReference = 3ABBC61D1BE68FF500D563DF /* swift3D.framework */;
+			productReference = 3ABBC6C91BE695DA00D563DF /* swift3D.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3ABBC6261BE68FF500D563DF /* swift3DTests */ = {
+		3ABBC6D11BE695DA00D563DF /* swift3DTests-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3ABBC6341BE68FF500D563DF /* Build configuration list for PBXNativeTarget "swift3DTests" */;
+			buildConfigurationList = 3ABBC6DD1BE695DA00D563DF /* Build configuration list for PBXNativeTarget "swift3DTests-Mac" */;
 			buildPhases = (
-				3ABBC6231BE68FF500D563DF /* Sources */,
-				3ABBC6241BE68FF500D563DF /* Frameworks */,
-				3ABBC6251BE68FF500D563DF /* Resources */,
+				3ABBC6CE1BE695DA00D563DF /* Sources */,
+				3ABBC6CF1BE695DA00D563DF /* Frameworks */,
+				3ABBC6D01BE695DA00D563DF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3ABBC62A1BE68FF500D563DF /* PBXTargetDependency */,
+				3ABBC6D51BE695DA00D563DF /* PBXTargetDependency */,
 			);
-			name = swift3DTests;
+			name = "swift3DTests-Mac";
 			productName = swift3DTests;
-			productReference = 3ABBC6271BE68FF500D563DF /* swift3DTests.xctest */;
+			productReference = 3ABBC6D21BE695DA00D563DF /* swift3DTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3ABBC6E41BE696DB00D563DF /* swift3D-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3ABBC6F61BE696DB00D563DF /* Build configuration list for PBXNativeTarget "swift3D-iOS" */;
+			buildPhases = (
+				3ABBC6E01BE696DB00D563DF /* Sources */,
+				3ABBC6E11BE696DB00D563DF /* Frameworks */,
+				3ABBC6E21BE696DB00D563DF /* Headers */,
+				3ABBC6E31BE696DB00D563DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "swift3D-iOS";
+			productName = swift3D;
+			productReference = 3ABBC6E51BE696DB00D563DF /* swift3D.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3ABBC6ED1BE696DB00D563DF /* swift3DTests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3ABBC6F91BE696DB00D563DF /* Build configuration list for PBXNativeTarget "swift3DTests-iOS" */;
+			buildPhases = (
+				3ABBC6EA1BE696DB00D563DF /* Sources */,
+				3ABBC6EB1BE696DB00D563DF /* Frameworks */,
+				3ABBC6EC1BE696DB00D563DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3ABBC6F11BE696DB00D563DF /* PBXTargetDependency */,
+			);
+			name = "swift3DTests-iOS";
+			productName = swift3DTests;
+			productReference = 3ABBC6EE1BE696DB00D563DF /* swift3DTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -146,10 +269,16 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Adrian Krupa";
 				TargetAttributes = {
-					3ABBC61C1BE68FF500D563DF = {
+					3ABBC6C81BE695DA00D563DF = {
 						CreatedOnToolsVersion = 7.1;
 					};
-					3ABBC6261BE68FF500D563DF = {
+					3ABBC6D11BE695DA00D563DF = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					3ABBC6E41BE696DB00D563DF = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					3ABBC6ED1BE696DB00D563DF = {
 						CreatedOnToolsVersion = 7.1;
 					};
 				};
@@ -166,21 +295,37 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3ABBC61C1BE68FF500D563DF /* swift3D */,
-				3ABBC6261BE68FF500D563DF /* swift3DTests */,
+				3ABBC6C81BE695DA00D563DF /* swift3D-Mac */,
+				3ABBC6D11BE695DA00D563DF /* swift3DTests-Mac */,
+				3ABBC6E41BE696DB00D563DF /* swift3D-iOS */,
+				3ABBC6ED1BE696DB00D563DF /* swift3DTests-iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3ABBC61B1BE68FF500D563DF /* Resources */ = {
+		3ABBC6C71BE695DA00D563DF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3ABBC6251BE68FF500D563DF /* Resources */ = {
+		3ABBC6D01BE695DA00D563DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ABBC6E31BE696DB00D563DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ABBC6EC1BE696DB00D563DF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -190,28 +335,62 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3ABBC6181BE68FF500D563DF /* Sources */ = {
+		3ABBC6C41BE695DA00D563DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A559EFE1BF8064C00E76253 /* Matrix.swift in Sources */,
+				3ABBC7021BE69B5900D563DF /* Common.swift in Sources */,
+				3A559F011BF8158100E76253 /* Trigonometric.swift in Sources */,
+				3A9BBF671C07BBBA007AAC40 /* Matrix_Transform.swift in Sources */,
+				3A559EFB1BF7FAFE00E76253 /* Geometric.swift in Sources */,
+				3A559EF81BF7E54C00E76253 /* Exponential.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3ABBC6231BE68FF500D563DF /* Sources */ = {
+		3ABBC6CE1BE695DA00D563DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ABBC62D1BE68FF500D563DF /* swift3DTests.swift in Sources */,
+				3ABBC6D81BE695DA00D563DF /* swift3DTests.swift in Sources */,
+				3ABBC70B1BE69C2800D563DF /* glm-to-swift.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ABBC6E01BE696DB00D563DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A559EFF1BF8064C00E76253 /* Matrix.swift in Sources */,
+				3ABBC7031BE69B5900D563DF /* Common.swift in Sources */,
+				3A559F021BF8158100E76253 /* Trigonometric.swift in Sources */,
+				3A9BBF681C07BBBA007AAC40 /* Matrix_Transform.swift in Sources */,
+				3A559EFC1BF7FAFE00E76253 /* Geometric.swift in Sources */,
+				3A559EF91BF7E54C00E76253 /* Exponential.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ABBC6EA1BE696DB00D563DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ABBC6FC1BE6983600D563DF /* swift3DTests.swift in Sources */,
+				3ABBC70C1BE69C2800D563DF /* glm-to-swift.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3ABBC62A1BE68FF500D563DF /* PBXTargetDependency */ = {
+		3ABBC6D51BE695DA00D563DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3ABBC61C1BE68FF500D563DF /* swift3D */;
-			targetProxy = 3ABBC6291BE68FF500D563DF /* PBXContainerItemProxy */;
+			target = 3ABBC6C81BE695DA00D563DF /* swift3D-Mac */;
+			targetProxy = 3ABBC6D41BE695DA00D563DF /* PBXContainerItemProxy */;
+		};
+		3ABBC6F11BE696DB00D563DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3ABBC6E41BE696DB00D563DF /* swift3D-iOS */;
+			targetProxy = 3ABBC6F01BE696DB00D563DF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -253,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -294,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -302,9 +481,10 @@
 			};
 			name = Release;
 		};
-		3ABBC6321BE68FF500D563DF /* Debug */ = {
+		3ABBC6DB1BE695DA00D563DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -314,15 +494,18 @@
 				INFOPLIST_FILE = swift3D/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Krupa.swift3D";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = swift3D;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		3ABBC6331BE68FF500D563DF /* Release */ = {
+		3ABBC6DC1BE695DA00D563DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -332,31 +515,119 @@
 				INFOPLIST_FILE = swift3D/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Krupa.swift3D";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = swift3D;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Release;
 		};
-		3ABBC6351BE68FF500D563DF /* Debug */ = {
+		3ABBC6DE1BE695DA00D563DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = swift3DTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Krupa.swift3DTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = swift3DTests;
+				SWIFT_OBJC_BRIDGING_HEADER = "swift3DTests/swift3DTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		3ABBC6361BE68FF500D563DF /* Release */ = {
+		3ABBC6DF1BE695DA00D563DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = swift3DTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Krupa.swift3DTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = swift3DTests;
+				SWIFT_OBJC_BRIDGING_HEADER = "swift3DTests/swift3DTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Release;
+		};
+		3ABBC6F71BE696DB00D563DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = swift3D/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Krupa.swift3D";
+				PRODUCT_NAME = swift3D;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3ABBC6F81BE696DB00D563DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = swift3D/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Krupa.swift3D";
+				PRODUCT_NAME = swift3D;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3ABBC6FA1BE696DB00D563DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = swift3DTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Krupa.swift3DTests";
+				PRODUCT_NAME = swift3DTests;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "swift3DTests/swift3DTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3ABBC6FB1BE696DB00D563DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = swift3DTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Krupa.swift3DTests";
+				PRODUCT_NAME = swift3DTests;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "swift3DTests/swift3DTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -372,21 +643,41 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3ABBC6311BE68FF500D563DF /* Build configuration list for PBXNativeTarget "swift3D" */ = {
+		3ABBC6DA1BE695DA00D563DF /* Build configuration list for PBXNativeTarget "swift3D-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3ABBC6321BE68FF500D563DF /* Debug */,
-				3ABBC6331BE68FF500D563DF /* Release */,
+				3ABBC6DB1BE695DA00D563DF /* Debug */,
+				3ABBC6DC1BE695DA00D563DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		3ABBC6341BE68FF500D563DF /* Build configuration list for PBXNativeTarget "swift3DTests" */ = {
+		3ABBC6DD1BE695DA00D563DF /* Build configuration list for PBXNativeTarget "swift3DTests-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3ABBC6351BE68FF500D563DF /* Debug */,
-				3ABBC6361BE68FF500D563DF /* Release */,
+				3ABBC6DE1BE695DA00D563DF /* Debug */,
+				3ABBC6DF1BE695DA00D563DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3ABBC6F61BE696DB00D563DF /* Build configuration list for PBXNativeTarget "swift3D-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ABBC6F71BE696DB00D563DF /* Debug */,
+				3ABBC6F81BE696DB00D563DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3ABBC6F91BE696DB00D563DF /* Build configuration list for PBXNativeTarget "swift3DTests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ABBC6FA1BE696DB00D563DF /* Debug */,
+				3ABBC6FB1BE696DB00D563DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

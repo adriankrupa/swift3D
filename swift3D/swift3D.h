@@ -6,7 +6,7 @@
 //  Copyright © 2015 Adrian Krupa. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for swift3D.
 FOUNDATION_EXPORT double swift3DVersionNumber;
