@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3ABBC6E41BE696DB00D563DF"
+               BlueprintIdentifier = "3ABBC6C81BE695DA00D563DF"
                BuildableName = "swift3D.framework"
-               BlueprintName = "swift3D-iOS"
+               BlueprintName = "swift3D-Mac"
                ReferencedContainer = "container:swift3D.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -20,7 +20,6 @@
 		3ABBC6CC1BE695DA00D563DF /* swift3D.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABBC6CB1BE695DA00D563DF /* swift3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3ABBC6D31BE695DA00D563DF /* swift3D.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABBC6C91BE695DA00D563DF /* swift3D.framework */; };
 		3ABBC6D81BE695DA00D563DF /* swift3DTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBC6D71BE695DA00D563DF /* swift3DTests.swift */; };
-		3ABBC6EF1BE696DB00D563DF /* swift3D.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABBC6E51BE696DB00D563DF /* swift3D.framework */; };
 		3ABBC6FC1BE6983600D563DF /* swift3DTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBC6D71BE695DA00D563DF /* swift3DTests.swift */; };
 		3ABBC6FD1BE6989900D563DF /* swift3D.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABBC6CB1BE695DA00D563DF /* swift3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3ABBC7021BE69B5900D563DF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBC7011BE69B5900D563DF /* Common.swift */; };
@@ -58,8 +57,6 @@
 		3ABBC6D21BE695DA00D563DF /* swift3DTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swift3DTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ABBC6D71BE695DA00D563DF /* swift3DTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift3DTests.swift; sourceTree = "<group>"; };
 		3ABBC6D91BE695DA00D563DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3ABBC6E51BE696DB00D563DF /* swift3D.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = swift3D.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3ABBC6EE1BE696DB00D563DF /* swift3DTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swift3DTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ABBC6FE1BE6995900D563DF /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glm; sourceTree = "<group>"; };
 		3ABBC7011BE69B5900D563DF /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		3ABBC7071BE69C2700D563DF /* swift3DTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift3DTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -94,7 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ABBC6EF1BE696DB00D563DF /* swift3D.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,8 +111,6 @@
 			children = (
 				3ABBC6C91BE695DA00D563DF /* swift3D.framework */,
 				3ABBC6D21BE695DA00D563DF /* swift3DTests.xctest */,
-				3ABBC6E51BE696DB00D563DF /* swift3D.framework */,
-				3ABBC6EE1BE696DB00D563DF /* swift3DTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,7 +232,6 @@
 			);
 			name = "swift3D-iOS";
 			productName = swift3D;
-			productReference = 3ABBC6E51BE696DB00D563DF /* swift3D.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3ABBC6ED1BE696DB00D563DF /* swift3DTests-iOS */ = {
@@ -256,7 +249,6 @@
 			);
 			name = "swift3DTests-iOS";
 			productName = swift3DTests;
-			productReference = 3ABBC6EE1BE696DB00D563DF /* swift3DTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
