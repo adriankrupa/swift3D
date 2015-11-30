@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3ABBC6ED1BE696DB00D563DF"
-               BuildableName = "swift3DTests.xctest"
+               BuildableName = "swift3DTests-iOS"
                BlueprintName = "swift3DTests-iOS"
                ReferencedContainer = "container:swift3D.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3ABBC6E41BE696DB00D563DF"
-            BuildableName = "swift3D.framework"
+            BuildableName = "swift3D-iOS"
             BlueprintName = "swift3D-iOS"
             ReferencedContainer = "container:swift3D.xcodeproj">
          </BuildableReference>
@@ -61,15 +61,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3ABBC6E41BE696DB00D563DF"
-            BuildableName = "swift3D.framework"
-            BlueprintName = "swift3D-iOS"
-            ReferencedContainer = "container:swift3D.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -83,7 +74,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3ABBC6E41BE696DB00D563DF"
-            BuildableName = "swift3D.framework"
+            BuildableName = "swift3D-iOS"
             BlueprintName = "swift3D-iOS"
             ReferencedContainer = "container:swift3D.xcodeproj">
          </BuildableReference>
