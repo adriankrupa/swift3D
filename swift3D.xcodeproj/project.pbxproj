@@ -26,6 +26,12 @@
 		3AC30B351C0BE048006DD8AE /* swift3DTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC30B331C0BE048006DD8AE /* swift3DTests.swift */; };
 		3AC30B381C0BE05E006DD8AE /* glm-to-swift.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AC30B361C0BE05E006DD8AE /* glm-to-swift.mm */; };
 		3AC30B391C0BE05E006DD8AE /* glm-to-swift.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AC30B361C0BE05E006DD8AE /* glm-to-swift.mm */; };
+		3AC30B3C1C0CF3B9006DD8AE /* glm in Resources */ = {isa = PBXBuildFile; fileRef = 3AC30B3B1C0CF3B9006DD8AE /* glm */; };
+		3AC30B3D1C0CF3B9006DD8AE /* glm in Resources */ = {isa = PBXBuildFile; fileRef = 3AC30B3B1C0CF3B9006DD8AE /* glm */; };
+		3AC30B3F1C0CF618006DD8AE /* Quaternion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC30B3E1C0CF618006DD8AE /* Quaternion.swift */; };
+		3AC30B401C0CF618006DD8AE /* Quaternion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC30B3E1C0CF618006DD8AE /* Quaternion.swift */; };
+		AB3CAC6450676305E25FEBFE /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CAAB0C1F2C860D589D653 /* Vector.swift */; };
+		AB3CADC1F28A669DCEFA7086 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CAAB0C1F2C860D589D653 /* Vector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +54,6 @@
 /* Begin PBXFileReference section */
 		3ABBC6C91BE695DA00D563DF /* swift3D.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = swift3D.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ABBC6D21BE695DA00D563DF /* swift3DTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swift3DTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3ABBC6FE1BE6995900D563DF /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glm; sourceTree = "<group>"; };
 		3AC30B141C0BDAA4006DD8AE /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Common.swift; path = Source/Common.swift; sourceTree = SOURCE_ROOT; };
 		3AC30B151C0BDAA4006DD8AE /* Exponential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exponential.swift; path = Source/Exponential.swift; sourceTree = SOURCE_ROOT; };
 		3AC30B161C0BDAA4006DD8AE /* Geometric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Geometric.swift; path = Source/Geometric.swift; sourceTree = SOURCE_ROOT; };
@@ -62,6 +67,9 @@
 		3AC30B361C0BE05E006DD8AE /* glm-to-swift.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "glm-to-swift.mm"; path = "Tests/glm-to-swift.mm"; sourceTree = SOURCE_ROOT; };
 		3AC30B371C0BE05E006DD8AE /* swift3DTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "swift3DTests-Bridging-Header.h"; path = "Tests/swift3DTests-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		3AC30B3A1C0BE065006DD8AE /* glm-to-swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "glm-to-swift.h"; path = "Tests/glm-to-swift.h"; sourceTree = SOURCE_ROOT; };
+		3AC30B3B1C0CF3B9006DD8AE /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; name = glm; path = Tests/glm; sourceTree = SOURCE_ROOT; };
+		3AC30B3E1C0CF618006DD8AE /* Quaternion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quaternion.swift; path = Source/Quaternion.swift; sourceTree = SOURCE_ROOT; };
+		AB3CAAB0C1F2C860D589D653 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,8 @@
 				3AC30B1A1C0BDAA4006DD8AE /* Trigonometric.swift */,
 				3AC30B2F1C0BDCF5006DD8AE /* swift3D.h */,
 				3ABBC6FF1BE6996800D563DF /* Supporting Files */,
+				3AC30B3E1C0CF618006DD8AE /* Quaternion.swift */,
+				AB3CAAB0C1F2C860D589D653 /* Vector.swift */,
 			);
 			name = Source;
 			path = swift3D;
@@ -136,7 +146,7 @@
 			children = (
 				3AC30B331C0BE048006DD8AE /* swift3DTests.swift */,
 				3ABBC7001BE6997700D563DF /* Supporting Files */,
-				3ABBC6FE1BE6995900D563DF /* glm */,
+				3AC30B3B1C0CF3B9006DD8AE /* glm */,
 				3AC30B3A1C0BE065006DD8AE /* glm-to-swift.h */,
 				3AC30B361C0BE05E006DD8AE /* glm-to-swift.mm */,
 				3AC30B371C0BE05E006DD8AE /* swift3DTests-Bridging-Header.h */,
@@ -309,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AC30B3C1C0CF3B9006DD8AE /* glm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AC30B3D1C0CF3B9006DD8AE /* glm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,8 +349,10 @@
 				3AC30B1B1C0BDAA4006DD8AE /* Common.swift in Sources */,
 				3AC30B231C0BDAA4006DD8AE /* Matrix.swift in Sources */,
 				3AC30B211C0BDAA4006DD8AE /* Matrix_Transform.swift in Sources */,
+				3AC30B3F1C0CF618006DD8AE /* Quaternion.swift in Sources */,
 				3AC30B1F1C0BDAA4006DD8AE /* Geometric.swift in Sources */,
 				3AC30B1D1C0BDAA4006DD8AE /* Exponential.swift in Sources */,
+				AB3CAC6450676305E25FEBFE /* Vector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,8 +373,10 @@
 				3AC30B1C1C0BDAA4006DD8AE /* Common.swift in Sources */,
 				3AC30B241C0BDAA4006DD8AE /* Matrix.swift in Sources */,
 				3AC30B221C0BDAA4006DD8AE /* Matrix_Transform.swift in Sources */,
+				3AC30B401C0CF618006DD8AE /* Quaternion.swift in Sources */,
 				3AC30B201C0BDAA4006DD8AE /* Geometric.swift in Sources */,
 				3AC30B1E1C0BDAA4006DD8AE /* Exponential.swift in Sources */,
+				AB3CADC1F28A669DCEFA7086 /* Vector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

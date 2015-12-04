@@ -326,7 +326,7 @@ func modf(x: double4) -> (double4, double4) {
 /// x and y using the floating-point value a.
 /// The value for t is not restricted to the range [0, 1].
 @warn_unused_result
-func mix(x: Float, y: Float, t: Float) -> Float {
+func mix(x: Float, _ y: Float, _ t: Float) -> Float {
     return x * (1.0 - t) + y * t;
 }
 
@@ -334,7 +334,7 @@ func mix(x: Float, y: Float, t: Float) -> Float {
 /// x and y using the floating-point value a.
 /// The value for t is not restricted to the range [0, 1].
 @warn_unused_result
-func mix(x: Double, y: Double, t: Double) -> Double {
+func mix(x: Double, _ y: Double, _ t: Double) -> Double {
     return x * (1.0 - t) + y * t;
 }
 

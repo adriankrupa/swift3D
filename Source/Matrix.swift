@@ -28,6 +28,10 @@ public extension float3x3 {
             return t1 + t2 + t3
         }
     }
+
+    public init(_ m: float4x4) {
+        self.init([float3(m[0]), float3(m[1]), float3(m[2])])
+    }
 }
 
 public extension float4x4 {
@@ -51,6 +55,10 @@ public extension float4x4 {
                 self[0,0] * DetCof[0] + self[0,1] * DetCof[1] +
                     self[0,2] * DetCof[2] + self[0,3] * DetCof[3];
         }
+    }
+
+    public init(_ m: float3x3) {
+        self.init([float4(m[0]), float4(m[1]), float4(m[2]), float4()])
     }
 }
 
