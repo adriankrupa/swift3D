@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary     = "Swift3D implements handy function for 3D programming"
   s.homepage    = "https://github.com/adriankrupa/swift3D"
   s.license     = { :type => "MIT" }
-  s.authors     = { "adriankrupa" => "adrian.krupa91@@gmail.com", }
+  s.authors     = { "adriankrupa" => "adrian.krupa91@gmail.com", }
 
   s.requires_arc = true
   s.osx.deployment_target = "10.9"
