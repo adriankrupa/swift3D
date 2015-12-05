@@ -574,7 +574,7 @@ func normalize(q: dquat) -> dquat {
     let len = length(q)
     if (len <= Double(0)) {
         // Problem
-        return quat(1, 0, 0, 0)
+        return dquat(1, 0, 0, 0)
     }
     let oneOverLen = Double(1) / len
     return dquat(q.w * oneOverLen, q.x * oneOverLen, q.y * oneOverLen, q.z * oneOverLen)
@@ -732,7 +732,7 @@ func double4x4_cast(q: dquat) -> double4x4 {
 }
 
 /// Converts a 3 * 3 matrix to a quaternion.
-func quat_cast(m: double3x3) -> dquat {
+func dquat_cast(m: double3x3) -> dquat {
     let fourXSquaredMinus1 = m[0][0] - m[1][1] - m[2][2]
     let fourYSquaredMinus1 = m[1][1] - m[0][0] - m[2][2]
     let fourZSquaredMinus1 = m[2][2] - m[0][0] - m[1][1]
@@ -792,8 +792,8 @@ func quat_cast(m: double3x3) -> dquat {
 }
 
 /// Converts a 4 * 4 matrix to a quaternion.
-func quat_cast(m: double4x4) -> dquat {
-    return quat_cast(double3x3(m))
+func dquat_cast(m: double4x4) -> dquat {
+    return dquat_cast(double3x3(m))
 }
 
 /// Returns the quaternion rotation angle.

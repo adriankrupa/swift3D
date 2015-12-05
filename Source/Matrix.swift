@@ -81,6 +81,10 @@ public extension double3x3 {
             return t1 + t2 + t3
         }
     }
+    
+    public init(_ m: double4x4) {
+        self.init([double3(m[0]), double3(m[1]), double3(m[2])])
+    }
 }
 
 public extension double4x4 {
@@ -104,5 +108,9 @@ public extension double4x4 {
                 self[0,0] * DetCof[0] + self[0,1] * DetCof[1] +
                     self[0,2] * DetCof[2] + self[0,3] * DetCof[3];
         }
+    }
+    
+    public init(_ m: double3x3) {
+        self.init([double4(m[0]), double4(m[1]), double4(m[2]), double4()])
     }
 }

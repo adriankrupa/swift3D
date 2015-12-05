@@ -1,0 +1,9 @@
+language: objective-c
+
+xcode_project: swift3D.xcodeproj
+xcode_scheme: swift3D-Mac
+osx_image: xcode7.1
+xcode_sdk: macosx10.11
+
+script:
+- xcodebuild test -project swift3D.xcodeproj -schemeswift3D-Mac

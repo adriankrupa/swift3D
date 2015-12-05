@@ -61,6 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3ABBC6C81BE695DA00D563DF"
+            BuildableName = "swift3D.framework"
+            BlueprintName = "swift3D-Mac"
+            ReferencedContainer = "container:swift3D.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
