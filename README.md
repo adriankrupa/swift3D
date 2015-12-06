@@ -12,7 +12,7 @@ A set of Swift functions useful for 3D programming. It expand common mathematica
 
 ## Using [Carthage](https://github.com/Carthage/Carthage)
 
-Add `github "adriankrupa/Swift3D" ~> 0.1.0` to your `Cartfile` and run `carthage update`. If unfamiliar with Carthage then checkout their [Getting Started section](https://github.com/Carthage/Carthage#getting-started)
+Add `github "adriankrupa/Swift3D"` to your `Cartfile` and run `carthage update`. If unfamiliar with Carthage then checkout their [Getting Started section](https://github.com/Carthage/Carthage#getting-started)
 
 ## Using [cocoapods](http://cocoapods.org/) version 0.36.x or greater
 
@@ -28,7 +28,3 @@ Add `pod 'Swift3D'` to your `Podfile` and run `pod install`. Add `use_frameworks
 6. In your project file `import Swift3D` and you can call all of the helper functions.
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/adriankrupa/swift3d/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/adriankrupa/swift3d/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-

@@ -105,23 +105,23 @@ public struct quat: ArrayLiteralConvertible, CustomDebugStringConvertible {
     }
 }
 
-prefix func +(q: quat) -> quat {
+prefix public func +(q: quat) -> quat {
     return q
 }
 
-prefix func -(q: quat) -> quat {
+prefix public func -(q: quat) -> quat {
     return quat(-q.x, -q.y, -q.z, -q.w)
 }
 
-func +(q: quat, p: quat) -> quat {
+public func +(q: quat, p: quat) -> quat {
     return quat(q.x + p.x, q.y + p.y, q.z + p.z, q.w + p.w)
 }
 
-func -(q: quat, p: quat) -> quat {
+public func -(q: quat, p: quat) -> quat {
     return quat(q.x - p.x, q.y - p.y, q.z - p.z, q.w - p.w)
 }
 
-func *(q: quat, p: quat) -> quat {
+public func *(q: quat, p: quat) -> quat {
     let w = p.w * q.w - p.x * q.x - p.y * q.y - p.z * q.z
     let x = p.w * q.x + p.x * q.w + p.y * q.z - p.z * q.y
     let y = p.w * q.y + p.y * q.w + p.z * q.x - p.x * q.z
@@ -129,7 +129,7 @@ func *(q: quat, p: quat) -> quat {
     return quat(x, y, z, w)
 }
 
-func *(q: quat, v: float3) -> float3 {
+public func *(q: quat, v: float3) -> float3 {
     let QuatVector = float3(q.x, q.y, q.z)
     let uv = cross(QuatVector, v)
     let uuv = cross(QuatVector, uv)
@@ -137,32 +137,32 @@ func *(q: quat, v: float3) -> float3 {
     return v + ((uv * q.w) + uuv) * Float(2)
 }
 
-func *(v: float3, q: quat) -> float3 {
+public func *(v: float3, q: quat) -> float3 {
     return inverse(q) * v
 }
 
-func *(q: quat, v: float4) -> float4 {
+public func *(q: quat, v: float4) -> float4 {
     return float4(q * float3(v), v.w)
 }
 
-func *(v: float4, q: quat) -> float4 {
+public func *(v: float4, q: quat) -> float4 {
     return inverse(q) * v
 }
 
-func *(q: quat, p: Float) -> quat {
+public func *(q: quat, p: Float) -> quat {
     return quat(q.x * p, q.y * p, q.z * p, q.w * p)
 }
 
-func *(p: Float, q: quat) -> quat {
+public func *(p: Float, q: quat) -> quat {
     return q * p
 }
 
-func /(q: quat, p: Float) -> quat {
+public func /(q: quat, p: Float) -> quat {
     return quat(q.x / p, q.y / p, q.z / p, q.w / p)
 }
 
 /// Returns the normalized quaternion.
-func normalize(q: quat) -> quat {
+public func normalize(q: quat) -> quat {
     let len = length(q)
     if (len <= Float(0)) {
         // Problem
@@ -173,29 +173,29 @@ func normalize(q: quat) -> quat {
 }
 
 /// Returns the length of the quaternion.
-func length(q: quat) -> Float {
+public func length(q: quat) -> Float {
     return sqrt(dot(q, q))
 }
 
 /// Returns the q conjugate.
-func conjugate(q: quat) -> quat {
+public func conjugate(q: quat) -> quat {
     return quat(q.w, -q.x, -q.y, -q.z)
 }
 
 /// Returns the q inverse.
-func inverse(q: quat) -> quat {
+public func inverse(q: quat) -> quat {
     return conjugate(q) / dot(q, q)
 }
 
 /// Returns dot product of q1 and q2, i.e., q1[0] * q2[0] + q1[1] * q2[1] + ...
-func dot(q1: quat, _ q2: quat) -> Float {
+public func dot(q1: quat, _ q2: quat) -> Float {
     return q1.x * q2.x + q1.y * q2.y + q1.z * q2.z + q1.w * q2.w
 }
 
 /// Spherical linear interpolation of two quaternions.
 /// The interpolation is oriented and the rotation is performed at constant speed.
 /// For short path spherical linear interpolation, use the slerp function.
-func mix(x: quat, _ y: quat, _ a: Float) -> quat {
+public func mix(x: quat, _ y: quat, _ a: Float) -> quat {
     let cosTheta = dot(x, y);
 
     // Perform a linear interpolation when cosTheta is close to 1 to avoid side effect of sin(angle) becoming a zero denominator
@@ -216,7 +216,7 @@ func mix(x: quat, _ y: quat, _ a: Float) -> quat {
 
 /// Linear interpolation of two quaternions.
 /// The interpolation is oriented.
-func lerp(x: quat, _ y: quat, _ a: Float) -> quat {
+public func lerp(x: quat, _ y: quat, _ a: Float) -> quat {
     // Lerp is only defined in [0, 1]
     assert(a >= Float(0))
     assert(a <= Float(1))
@@ -226,7 +226,7 @@ func lerp(x: quat, _ y: quat, _ a: Float) -> quat {
 
 /// Spherical linear interpolation of two quaternions.
 /// The interpolation always take the short path and the rotation is performed at constant speed.
-func slerp(x: quat, _ y: quat, _ a: Float) -> quat {
+public func slerp(x: quat, _ y: quat, _ a: Float) -> quat {
     var z = y
 
     var cosTheta = dot(x, y)
@@ -254,7 +254,7 @@ func slerp(x: quat, _ y: quat, _ a: Float) -> quat {
 }
 
 /// Rotates a quaternion from a vector of 3 components axis and an angle.
-func rotate(q: quat, _ angle: Float, _ v: float3) -> quat {
+public func rotate(q: quat, _ angle: Float, _ v: float3) -> quat {
     var tmp = v
 
     // Axis of rotation must be normalised
@@ -272,27 +272,27 @@ func rotate(q: quat, _ angle: Float, _ v: float3) -> quat {
 
 /// Returns euler angles, yitch as x, yaw as y, roll as z.
 /// The result is expressed in radians if GLM_FORCE_RADIANS is defined or degrees otherwise.
-func eulerAngles(x: quat) -> float3 {
+public func eulerAngles(x: quat) -> float3 {
     return float3(pitch(x), yaw(x), roll(x))
 }
 
 /// Returns roll value of euler angles expressed in radians.
-func roll(q: quat) -> Float {
+public func roll(q: quat) -> Float {
     return Float(atan2(Float(2) * (q.x * q.y + q.w * q.z), q.w * q.w + q.x * q.x - q.y * q.y - q.z * q.z))
 }
 
 /// Returns pitch value of euler angles expressed in radians.
-func pitch(q: quat) -> Float {
+public func pitch(q: quat) -> Float {
     return Float(atan2(Float(2) * (q.y * q.z + q.w * q.x), q.w * q.w - q.x * q.x - q.y * q.y + q.z * q.z))
 }
 
 /// Returns yaw value of euler angles expressed in radians.
-func yaw(q: quat) -> Float {
+public func yaw(q: quat) -> Float {
     return asin(Float(-2) * (q.x * q.z - q.w * q.y))
 }
 
 /// Converts a quaternion to a 3 * 3 matrix.
-func float3x3_cast(q: quat) -> float3x3 {
+public func float3x3_cast(q: quat) -> float3x3 {
     var Result = float3x3(1)
     let qxx = q.x * q.x
     let qyy = q.y * q.y
@@ -319,12 +319,12 @@ func float3x3_cast(q: quat) -> float3x3 {
 }
 
 /// Converts a quaternion to a 4 * 4 matrix.
-func float4x4_cast(q: quat) -> float4x4 {
+public func float4x4_cast(q: quat) -> float4x4 {
     return float4x4(float3x3_cast(q))
 }
 
 /// Converts a 3 * 3 matrix to a quaternion.
-func quat_cast(m: float3x3) -> quat {
+public func quat_cast(m: float3x3) -> quat {
     let fourXSquaredMinus1 = m[0][0] - m[1][1] - m[2][2]
     let fourYSquaredMinus1 = m[1][1] - m[0][0] - m[2][2]
     let fourZSquaredMinus1 = m[2][2] - m[0][0] - m[1][1]
@@ -384,17 +384,17 @@ func quat_cast(m: float3x3) -> quat {
 }
 
 /// Converts a 4 * 4 matrix to a quaternion.
-func quat_cast(m: float4x4) -> quat {
+public func quat_cast(m: float4x4) -> quat {
     return quat_cast(float3x3(m))
 }
 
 /// Returns the quaternion rotation angle.
-func angle(q: quat) -> Float {
+public func angle(q: quat) -> Float {
     return acos(q.w) * Float(2)
 }
 
 /// Returns the q rotation axis.
-func axis(q: quat) -> float3 {
+public func axis(q: quat) -> float3 {
     let tmp1 = Float(1) - q.w * q.w
     if (tmp1 <= Float(0)) {
         return float3(0, 0, 1)
@@ -404,7 +404,7 @@ func axis(q: quat) -> float3 {
 }
 
 /// Build a quaternion from an angle and a normalized axis.
-func angleAxis(angle: Float, v: float3) -> quat {
+public func angleAxis(angle: Float, v: float3) -> quat {
     var Result = quat()
 
     let a = angle
@@ -513,23 +513,23 @@ public struct dquat: ArrayLiteralConvertible, CustomDebugStringConvertible {
     }
 }
 
-prefix func +(q: dquat) -> dquat {
+prefix public func +(q: dquat) -> dquat {
     return q
 }
 
-prefix func -(q: dquat) -> dquat {
+prefix public func -(q: dquat) -> dquat {
     return dquat(-q.x, -q.y, -q.z, -q.w)
 }
 
-func +(q: dquat, p: dquat) -> dquat {
+public func +(q: dquat, p: dquat) -> dquat {
     return dquat(q.x + p.x, q.y + p.y, q.z + p.z, q.w + p.w)
 }
 
-func -(q: dquat, p: dquat) -> dquat {
+public func -(q: dquat, p: dquat) -> dquat {
     return dquat(q.x - p.x, q.y - p.y, q.z - p.z, q.w - p.w)
 }
 
-func *(q: dquat, p: dquat) -> dquat {
+public func *(q: dquat, p: dquat) -> dquat {
     let w = p.w * q.w - p.x * q.x - p.y * q.y - p.z * q.z
     let x = p.w * q.x + p.x * q.w + p.y * q.z - p.z * q.y
     let y = p.w * q.y + p.y * q.w + p.z * q.x - p.x * q.z
@@ -537,7 +537,7 @@ func *(q: dquat, p: dquat) -> dquat {
     return dquat(x, y, z, w)
 }
 
-func *(q: dquat, v: double3) -> double3 {
+public func *(q: dquat, v: double3) -> double3 {
     let QuatVector = double3(q.x, q.y, q.z)
     let uv = cross(QuatVector, v)
     let uuv = cross(QuatVector, uv)
@@ -545,32 +545,32 @@ func *(q: dquat, v: double3) -> double3 {
     return v + ((uv * q.w) + uuv) * Double(2)
 }
 
-func *(v: double3, q: dquat) -> double3 {
+public func *(v: double3, q: dquat) -> double3 {
     return inverse(q) * v
 }
 
-func *(q: dquat, v: double4) -> double4 {
+public func *(q: dquat, v: double4) -> double4 {
     return double4(q * double3(v), v.w)
 }
 
-func *(v: double4, q: dquat) -> double4 {
+public func *(v: double4, q: dquat) -> double4 {
     return inverse(q) * v
 }
 
-func *(q: dquat, p: Double) -> dquat {
+public func *(q: dquat, p: Double) -> dquat {
     return dquat(q.x * p, q.y * p, q.z * p, q.w * p)
 }
 
-func *(p: Double, q: dquat) -> dquat {
+public func *(p: Double, q: dquat) -> dquat {
     return q * p
 }
 
-func /(q: dquat, p: Double) -> dquat {
+public func /(q: dquat, p: Double) -> dquat {
     return dquat(q.x / p, q.y / p, q.z / p, q.w / p)
 }
 
 /// Returns the normalized quaternion.
-func normalize(q: dquat) -> dquat {
+public func normalize(q: dquat) -> dquat {
     let len = length(q)
     if (len <= Double(0)) {
         // Problem
@@ -581,29 +581,29 @@ func normalize(q: dquat) -> dquat {
 }
 
 /// Returns the length of the quaternion.
-func length(q: dquat) -> Double {
+public func length(q: dquat) -> Double {
     return sqrt(dot(q, q))
 }
 
 /// Returns the q conjugate.
-func conjugate(q: dquat) -> dquat {
+public func conjugate(q: dquat) -> dquat {
     return dquat(q.w, -q.x, -q.y, -q.z)
 }
 
 /// Returns the q inverse.
-func inverse(q: dquat) -> dquat {
+public func inverse(q: dquat) -> dquat {
     return conjugate(q) / dot(q, q)
 }
 
 /// Returns dot product of q1 and q2, i.e., q1[0] * q2[0] + q1[1] * q2[1] + ...
-func dot(q1: dquat, _ q2: dquat) -> Double {
+public func dot(q1: dquat, _ q2: dquat) -> Double {
     return q1.x * q2.x + q1.y * q2.y + q1.z * q2.z + q1.w * q2.w
 }
 
 /// Spherical linear interpolation of two quaternions.
 /// The interpolation is oriented and the rotation is performed at constant speed.
 /// For short path spherical linear interpolation, use the slerp function.
-func mix(x: dquat, _ y: dquat, _ a: Double) -> dquat {
+public func mix(x: dquat, _ y: dquat, _ a: Double) -> dquat {
     let cosTheta = dot(x, y);
 
     // Perform a linear interpolation when cosTheta is close to 1 to avoid side effect of sin(angle) becoming a zero denominator
@@ -624,7 +624,7 @@ func mix(x: dquat, _ y: dquat, _ a: Double) -> dquat {
 
 /// Linear interpolation of two quaternions.
 /// The interpolation is oriented.
-func lerp(x: dquat, _ y: dquat, _ a: Double) -> dquat {
+public func lerp(x: dquat, _ y: dquat, _ a: Double) -> dquat {
     // Lerp is only defined in [0, 1]
     assert(a >= Double(0))
     assert(a <= Double(1))
@@ -634,7 +634,7 @@ func lerp(x: dquat, _ y: dquat, _ a: Double) -> dquat {
 
 /// Spherical linear interpolation of two quaternions.
 /// The interpolation always take the short path and the rotation is performed at constant speed.
-func slerp(x: dquat, _ y: dquat, _ a: Double) -> dquat {
+public func slerp(x: dquat, _ y: dquat, _ a: Double) -> dquat {
     var z = y
 
     var cosTheta = dot(x, y)
@@ -662,7 +662,7 @@ func slerp(x: dquat, _ y: dquat, _ a: Double) -> dquat {
 }
 
 /// Rotates a quaternion from a vector of 3 components axis and an angle.
-func rotate(q: dquat, _ angle: Double, _ v: double3) -> dquat {
+public func rotate(q: dquat, _ angle: Double, _ v: double3) -> dquat {
     var tmp = v
 
     // Axis of rotation must be normalised
@@ -680,27 +680,27 @@ func rotate(q: dquat, _ angle: Double, _ v: double3) -> dquat {
 
 /// Returns euler angles, yitch as x, yaw as y, roll as z.
 /// The result is expressed in radians if GLM_FORCE_RADIANS is defined or degrees otherwise.
-func eulerAngles(x: dquat) -> double3 {
+public func eulerAngles(x: dquat) -> double3 {
     return double3(pitch(x), yaw(x), roll(x))
 }
 
 /// Returns roll value of euler angles expressed in radians.
-func roll(q: dquat) -> Double {
+public func roll(q: dquat) -> Double {
     return Double(atan2(Double(2) * (q.x * q.y + q.w * q.z), q.w * q.w + q.x * q.x - q.y * q.y - q.z * q.z))
 }
 
 /// Returns pitch value of euler angles expressed in radians.
-func pitch(q: dquat) -> Double {
+public func pitch(q: dquat) -> Double {
     return Double(atan2(Double(2) * (q.y * q.z + q.w * q.x), q.w * q.w - q.x * q.x - q.y * q.y + q.z * q.z))
 }
 
 /// Returns yaw value of euler angles expressed in radians.
-func yaw(q: dquat) -> Double {
+public func yaw(q: dquat) -> Double {
     return asin(Double(-2) * (q.x * q.z - q.w * q.y))
 }
 
 /// Converts a quaternion to a 3 * 3 matrix.
-func double3x3_cast(q: dquat) -> double3x3 {
+public func double3x3_cast(q: dquat) -> double3x3 {
     var Result = double3x3(1)
     let qxx = q.x * q.x
     let qyy = q.y * q.y
@@ -727,12 +727,12 @@ func double3x3_cast(q: dquat) -> double3x3 {
 }
 
 /// Converts a quaternion to a 4 * 4 matrix.
-func double4x4_cast(q: dquat) -> double4x4 {
+public func double4x4_cast(q: dquat) -> double4x4 {
     return double4x4(double3x3_cast(q))
 }
 
 /// Converts a 3 * 3 matrix to a quaternion.
-func dquat_cast(m: double3x3) -> dquat {
+public func dquat_cast(m: double3x3) -> dquat {
     let fourXSquaredMinus1 = m[0][0] - m[1][1] - m[2][2]
     let fourYSquaredMinus1 = m[1][1] - m[0][0] - m[2][2]
     let fourZSquaredMinus1 = m[2][2] - m[0][0] - m[1][1]
@@ -792,17 +792,17 @@ func dquat_cast(m: double3x3) -> dquat {
 }
 
 /// Converts a 4 * 4 matrix to a quaternion.
-func dquat_cast(m: double4x4) -> dquat {
+public func dquat_cast(m: double4x4) -> dquat {
     return dquat_cast(double3x3(m))
 }
 
 /// Returns the quaternion rotation angle.
-func angle(q: dquat) -> Double {
+public func angle(q: dquat) -> Double {
     return acos(q.w) * Double(2)
 }
 
 /// Returns the q rotation axis.
-func axis(q: dquat) -> double3 {
+public func axis(q: dquat) -> double3 {
     let tmp1 = Double(1) - q.w * q.w
     if (tmp1 <= Double(0)) {
         return double3(0, 0, 1)
@@ -812,7 +812,7 @@ func axis(q: dquat) -> double3 {
 }
 
 /// Build a quaternion from an angle and a normalized axis.
-func angleAxis(angle: Double, v: double3) -> dquat {
+public func angleAxis(angle: Double, v: double3) -> dquat {
     var Result = dquat()
 
     let a = angle
