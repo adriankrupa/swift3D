@@ -5,7 +5,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](https://travis-ci.org/adriankrupa/swift3D.svg?branch=master)](https://travis-ci.org/adriankrupa/swift3D)
 
-A set of Swift functions useful fro 3D programming. It expand common mathematical functions on SIMD data types. There are also handy functions for projection matrices, quaternions, matrices and vectors conversions. Everything is tested using [glm](https://github.com/g-truc/glm).
+A set of Swift functions useful for 3D programming. It expand common mathematical functions on SIMD data types. There are also handy functions for projection matrices, quaternions, matrices and vectors conversions. Everything is tested using [glm](https://github.com/g-truc/glm).
 
 
 # Setup #
