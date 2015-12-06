@@ -28,3 +28,7 @@ Add `pod 'Swift3D'` to your `Podfile` and run `pod install`. Add `use_frameworks
 6. In your project file `import Swift3D` and you can call all of the helper functions.
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/adriankrupa/swift3d/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/adriankrupa/swift3d/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
