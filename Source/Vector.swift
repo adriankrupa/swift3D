@@ -57,3 +57,81 @@ public extension double4 {
         w = 0
     }
 }
+
+public func ==(a: float4, b: float4) -> Bool {
+    for i in 0..<4 {
+        if(a[i] != b[i]) {
+            return false
+        }
+    }
+    return true
+}
+
+public func !=(a: float4, b: float4) -> Bool {
+    return !(a==b)
+}
+
+public func ==(a: float3, b: float3) -> Bool {
+    for i in 0..<3 {
+        if(a[i] != b[i]) {
+            return false
+        }
+    }
+    return true
+}
+
+public func !=(a: float3, b: float3) -> Bool {
+    return !(a==b)
+}
+
+public func ==(a: float2, b: float2) -> Bool {
+    for i in 0..<2 {
+        if(a[i] != b[i]) {
+            return false
+        }
+    }
+    return true
+}
+
+public func !=(a: float2, b: float2) -> Bool {
+    return !(a==b)
+}
+
+public func ==(a: double4, b: double4) -> Bool {
+    for i in 0..<4 {
+        if(a[i] != b[i]) {
+            return false
+        }
+    }
+    return true
+}
+
+public func !=(a: double4, b: double4) -> Bool {
+    return !(a==b)
+}
+
+public func ==(a: double3, b: double3) -> Bool {
+    for i in 0..<3 {
+        if(a[i] != b[i]) {
+            return false
+        }
+    }
+    return true
+}
+
+public func !=(a: double3, b: double3) -> Bool {
+    return !(a==b)
+}
+
+public func ==(a: double2, b: double2) -> Bool {
+    for i in 0..<2 {
+        if(a[i] != b[i]) {
+            return false
+        }
+    }
+    return true
+}
+
+public func !=(a: double2, b: double2) -> Bool {
+    return !(a==b)
+}

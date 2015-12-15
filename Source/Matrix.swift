@@ -58,7 +58,7 @@ public extension float4x4 {
     }
 
     public init(_ m: float3x3) {
-        self.init([float4(m[0]), float4(m[1]), float4(m[2]), float4()])
+        self.init([float4(m[0]), float4(m[1]), float4(m[2]), float4(0, 0, 0, 1)])
     }
 }
 
@@ -111,6 +111,84 @@ public extension double4x4 {
     }
     
     public init(_ m: double3x3) {
-        self.init([double4(m[0]), double4(m[1]), double4(m[2]), double4()])
+        self.init([double4(m[0]), double4(m[1]), double4(m[2]), double4(0, 0, 0, 1)])
     }
+}
+
+public func ==(a: float4x4, b: float4x4) -> Bool {
+    for i in 0..<4 {
+        if(a[i] != b[i]) {
+            return false
+        }
+    }
+    return true
+}
+
+public func !=(a: float4x4, b: float4x4) -> Bool {
+    return !(a==b)
+}
+
+public func ==(a: float3x3, b: float3x3) -> Bool {
+    for i in 0..<3 {
+        if(a[i] != b[i]) {
+            return false
+        }
+    }
+    return true
+}
+
+public func !=(a: float3x3, b: float3x3) -> Bool {
+    return !(a==b)
+}
+
+public func ==(a: float2x2, b: float2x2) -> Bool {
+    for i in 0..<2 {
+        if(a[i] != b[i]) {
+            return false
+        }
+    }
+    return true
+}
+
+public func !=(a: float2x2, b: float2x2) -> Bool {
+    return !(a==b)
+}
+
+public func ==(a: double4x4, b: double4x4) -> Bool {
+    for i in 0..<4 {
+        if(a[i] != b[i]) {
+            return false
+        }
+    }
+    return true
+}
+
+public func !=(a: double4x4, b: double4x4) -> Bool {
+    return !(a==b)
+}
+
+public func ==(a: double3x3, b: double3x3) -> Bool {
+    for i in 0..<3 {
+        if(a[i] != b[i]) {
+            return false
+        }
+    }
+    return true
+}
+
+public func !=(a: double3x3, b: double3x3) -> Bool {
+    return !(a==b)
+}
+
+public func ==(a: double2x2, b: double2x2) -> Bool {
+    for i in 0..<2 {
+        if(a[i] != b[i]) {
+            return false
+        }
+    }
+    return true
+}
+
+public func !=(a: double2x2, b: double2x2) -> Bool {
+    return !(a==b)
 }
