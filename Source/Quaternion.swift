@@ -437,7 +437,7 @@ public struct dquat: ArrayLiteralConvertible, CustomDebugStringConvertible {
         w = s
     }
 
-    public init(_ x: Double, _ y: Double, _ z: Double, _ w: Double) {
+    public init(_ w: Double, _ x: Double, _ y: Double, _ z: Double) {
         self.x = x
         self.y = y
         self.z = z
@@ -462,20 +462,20 @@ public struct dquat: ArrayLiteralConvertible, CustomDebugStringConvertible {
     ///
     /// - Precondition: `array` must have exactly four elements.
     public init(_ array: [Double]) {
-        x = array[0]
-        y = array[1]
-        z = array[2]
-        w = array[3]
+        w = array[0]
+        x = array[1]
+        y = array[2]
+        z = array[3]
     }
 
     /// Initialize using `arrayLiteral`.
     ///
     /// - Precondition: the array literal must exactly four elements.
     public init(arrayLiteral elements: Double...) {
-        x = elements[0]
-        y = elements[1]
-        z = elements[2]
-        w = elements[3]
+        w = elements[0]
+        x = elements[1]
+        y = elements[2]
+        z = elements[3]
     }
 
 
