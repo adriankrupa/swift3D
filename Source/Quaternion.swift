@@ -126,7 +126,7 @@ public func *(q: quat, p: quat) -> quat {
     let x = p.w * q.x + p.x * q.w + p.y * q.z - p.z * q.y
     let y = p.w * q.y + p.y * q.w + p.z * q.x - p.x * q.z
     let z = p.w * q.z + p.z * q.w + p.x * q.y - p.y * q.x
-    return quat(x, y, z, w)
+    return quat(w, x, y, z)
 }
 
 public func *(q: quat, v: float3) -> float3 {
