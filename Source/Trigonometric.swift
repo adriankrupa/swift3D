@@ -197,14 +197,14 @@ public func cos(v: double4) -> double4 {
     return double4(cos(v.x), cos(v.y), cos(v.z), cos(v.w))
 }
 
-// MARK: tan
-// MARK: asin
-// MARK: acos
-// MARK: atan
-// MARK: sinh
-// MARK: cosh
-// MARK: tanh
-// MARK: asinh
-// MARK: acosh
-// MARK: atanh
+// TODO: tan
+// TODO: asin
+// TODO: acos
+// TODO: atan
+// TODO: sinh
+// TODO: cosh
+// TODO: tanh
+// TODO: asinh
+// TODO: acosh
+// TODO: atanh
 

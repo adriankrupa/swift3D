@@ -327,7 +327,7 @@ public func modf(x: double4) -> (double4, double4) {
 /// The value for t is not restricted to the range [0, 1].
 @warn_unused_result
 public func mix(x: Float, _ y: Float, _ t: Float) -> Float {
-    return x * (1.0 - t) + y * t;
+    return x + t * (y - x)
 }
 
 /// Returns x * (1.0 - t) + y * t, i.e., the linear blend of
@@ -335,7 +335,7 @@ public func mix(x: Float, _ y: Float, _ t: Float) -> Float {
 /// The value for t is not restricted to the range [0, 1].
 @warn_unused_result
 public func mix(x: Double, _ y: Double, _ t: Double) -> Double {
-    return x * (1.0 - t) + y * t;
+    return x + t * (y - x)
 }
 
 // MARK: - smoothstep

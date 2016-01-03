@@ -30,6 +30,14 @@ public extension float4 {
         z = v.z
         w = 0
     }
+    
+    public init(_ q: quat) {
+        self.init()
+        x = q.x
+        y = q.y
+        z = q.z
+        w = q.w
+    }
 }
 
 public extension double3 {
@@ -55,6 +63,14 @@ public extension double4 {
         y = v.y
         z = v.z
         w = 0
+    }
+    
+    public init(_ q: dquat) {
+        self.init()
+        x = q.x
+        y = q.y
+        z = q.z
+        w = q.w
     }
 }
 

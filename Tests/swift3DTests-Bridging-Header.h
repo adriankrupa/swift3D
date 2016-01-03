@@ -3,3 +3,4 @@
 //
 
 #import "glm-to-swift.h"
+#import "glm-to-swift-quat.h"

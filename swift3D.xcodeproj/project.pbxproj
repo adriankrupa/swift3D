@@ -32,6 +32,10 @@
 		3AC30B3D1C0CF3B9006DD8AE /* glm in Resources */ = {isa = PBXBuildFile; fileRef = 3AC30B3B1C0CF3B9006DD8AE /* glm */; };
 		3AC30B3F1C0CF618006DD8AE /* Quaternion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC30B3E1C0CF618006DD8AE /* Quaternion.swift */; };
 		3AC30B401C0CF618006DD8AE /* Quaternion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC30B3E1C0CF618006DD8AE /* Quaternion.swift */; };
+		3AF992631C381C560061E157 /* swift3DQuaterionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF992621C381C560061E157 /* swift3DQuaterionTests.swift */; };
+		3AF992641C381C560061E157 /* swift3DQuaterionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF992621C381C560061E157 /* swift3DQuaterionTests.swift */; };
+		3AF9926A1C384A030061E157 /* glm-to-swift-quat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AF992691C384A030061E157 /* glm-to-swift-quat.mm */; };
+		3AF9926B1C384A030061E157 /* glm-to-swift-quat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AF992691C384A030061E157 /* glm-to-swift-quat.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,9 @@
 		3AC30B3A1C0BE065006DD8AE /* glm-to-swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "glm-to-swift.h"; path = "Tests/glm-to-swift.h"; sourceTree = SOURCE_ROOT; };
 		3AC30B3B1C0CF3B9006DD8AE /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; name = glm; path = Tests/glm; sourceTree = SOURCE_ROOT; };
 		3AC30B3E1C0CF618006DD8AE /* Quaternion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quaternion.swift; path = Source/Quaternion.swift; sourceTree = SOURCE_ROOT; };
+		3AF992621C381C560061E157 /* swift3DQuaterionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = swift3DQuaterionTests.swift; path = Tests/swift3DQuaterionTests.swift; sourceTree = SOURCE_ROOT; };
+		3AF992681C3849970061E157 /* glm-to-swift-quat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "glm-to-swift-quat.h"; path = "Tests/glm-to-swift-quat.h"; sourceTree = SOURCE_ROOT; };
+		3AF992691C384A030061E157 /* glm-to-swift-quat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "glm-to-swift-quat.mm"; path = "Tests/glm-to-swift-quat.mm"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,10 +152,13 @@
 			isa = PBXGroup;
 			children = (
 				3AC30B331C0BE048006DD8AE /* swift3DTests.swift */,
+				3AF992621C381C560061E157 /* swift3DQuaterionTests.swift */,
 				3ABBC7001BE6997700D563DF /* Supporting Files */,
 				3AC30B3B1C0CF3B9006DD8AE /* glm */,
 				3AC30B3A1C0BE065006DD8AE /* glm-to-swift.h */,
 				3AC30B361C0BE05E006DD8AE /* glm-to-swift.mm */,
+				3AF992681C3849970061E157 /* glm-to-swift-quat.h */,
+				3AF992691C384A030061E157 /* glm-to-swift-quat.mm */,
 				3AC30B371C0BE05E006DD8AE /* swift3DTests-Bridging-Header.h */,
 			);
 			name = Tests;
@@ -360,8 +370,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF9926A1C384A030061E157 /* glm-to-swift-quat.mm in Sources */,
 				3AC30B341C0BE048006DD8AE /* swift3DTests.swift in Sources */,
 				3AC30B381C0BE05E006DD8AE /* glm-to-swift.mm in Sources */,
+				3AF992631C381C560061E157 /* swift3DQuaterionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,8 +396,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF9926B1C384A030061E157 /* glm-to-swift-quat.mm in Sources */,
 				3AC30B351C0BE048006DD8AE /* swift3DTests.swift in Sources */,
 				3AC30B391C0BE05E006DD8AE /* glm-to-swift.mm in Sources */,
+				3AF992641C381C560061E157 /* swift3DQuaterionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

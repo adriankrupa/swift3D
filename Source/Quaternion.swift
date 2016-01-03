@@ -22,14 +22,18 @@ public struct quat: ArrayLiteralConvertible, CustomDebugStringConvertible {
         w = 1
     }
 
-    public init(_ s: Float, _ v: float3) {
+    public init(w: Float, v: float3) {
         x = v.x
         y = v.y
         z = v.z
-        w = s
+        self.w = w
+    }
+    
+    public init(angle: Float, axis: float3) {
+        self = angleAxis(angle, axis: axis)
     }
 
-    public init(_ x: Float, _ y: Float, _ z: Float, _ w: Float) {
+    public init(_ w: Float, _ x: Float, _ y: Float, _ z: Float) {
         self.x = x
         self.y = y
         self.z = z
@@ -41,13 +45,6 @@ public struct quat: ArrayLiteralConvertible, CustomDebugStringConvertible {
         y = q.y
         z = q.z
         w = q.w
-    }
-
-    public init(_ v: float4) {
-        x = v.x
-        y = v.y
-        z = v.z
-        w = v.w
     }
 
     /// Initialize to a vector with elements taken from `array`.
@@ -70,7 +67,6 @@ public struct quat: ArrayLiteralConvertible, CustomDebugStringConvertible {
         w = elements[3]
     }
 
-
     /// Create a quaternion from two normalized axis
     /// @see http://lolengine.net/blog/2013/09/18/beautiful-maths-quaternion-from-vectors
     public init(_ u: float3, _ v: float3) {
@@ -90,11 +86,11 @@ public struct quat: ArrayLiteralConvertible, CustomDebugStringConvertible {
         z = c.x * c.y * s.z - s.x * s.y * c.z
     }
 
-    public init(m: float3x3) {
+    public init(_ m: float3x3) {
         self.init(quat_cast(m))
     }
 
-    public init(m: float4x4) {
+    public init(_ m: float4x4) {
         self.init(quat_cast(m))
     }
 
@@ -110,18 +106,15 @@ prefix public func +(q: quat) -> quat {
 }
 
 prefix public func -(q: quat) -> quat {
-    return quat(-q.x, -q.y, -q.z, -q.w)
+    return quat(-q.w, -q.x, -q.y, -q.z)
 }
 
 public func +(q: quat, p: quat) -> quat {
-    return quat(q.x + p.x, q.y + p.y, q.z + p.z, q.w + p.w)
+    return quat(q.w + p.w, q.x + p.x, q.y + p.y, q.z + p.z)
 }
 
-public func -(q: quat, p: quat) -> quat {
-    return quat(q.x - p.x, q.y - p.y, q.z - p.z, q.w - p.w)
-}
-
-public func *(q: quat, p: quat) -> quat {
+public func *(p: quat, q: quat) -> quat {
+    
     let w = p.w * q.w - p.x * q.x - p.y * q.y - p.z * q.z
     let x = p.w * q.x + p.x * q.w + p.y * q.z - p.z * q.y
     let y = p.w * q.y + p.y * q.w + p.z * q.x - p.x * q.z
@@ -150,7 +143,7 @@ public func *(v: float4, q: quat) -> float4 {
 }
 
 public func *(q: quat, p: Float) -> quat {
-    return quat(q.x * p, q.y * p, q.z * p, q.w * p)
+    return quat( q.w * p, q.x * p, q.y * p, q.z * p)
 }
 
 public func *(p: Float, q: quat) -> quat {
@@ -158,7 +151,7 @@ public func *(p: Float, q: quat) -> quat {
 }
 
 public func /(q: quat, p: Float) -> quat {
-    return quat(q.x / p, q.y / p, q.z / p, q.w / p)
+    return quat( q.w / p, q.x / p, q.y / p, q.z / p)
 }
 
 /// Returns the normalized quaternion.
@@ -187,9 +180,9 @@ public func inverse(q: quat) -> quat {
     return conjugate(q) / dot(q, q)
 }
 
-/// Returns dot product of q1 and q2, i.e., q1[0] * q2[0] + q1[1] * q2[1] + ...
 public func dot(q1: quat, _ q2: quat) -> Float {
-    return q1.x * q2.x + q1.y * q2.y + q1.z * q2.z + q1.w * q2.w
+    let tmp = float4(q1.x * q2.x, q1.y * q2.y, q1.z * q2.z, q1.w * q2.w)
+    return (tmp.x + tmp.y) + (tmp.z + tmp.w)
 }
 
 /// Spherical linear interpolation of two quaternions.
@@ -217,10 +210,6 @@ public func mix(x: quat, _ y: quat, _ a: Float) -> quat {
 /// Linear interpolation of two quaternions.
 /// The interpolation is oriented.
 public func lerp(x: quat, _ y: quat, _ a: Float) -> quat {
-    // Lerp is only defined in [0, 1]
-    assert(a >= Float(0))
-    assert(a <= Float(1))
-
     return x * (Float(1) - a) + (y * a)
 }
 
@@ -254,8 +243,8 @@ public func slerp(x: quat, _ y: quat, _ a: Float) -> quat {
 }
 
 /// Rotates a quaternion from a vector of 3 components axis and an angle.
-public func rotate(q: quat, _ angle: Float, _ v: float3) -> quat {
-    var tmp = v
+public func rotate(q: quat, angle: Float, axis: float3) -> quat {
+    var tmp = axis
 
     // Axis of rotation must be normalised
     let len = length(tmp)
@@ -404,16 +393,16 @@ public func axis(q: quat) -> float3 {
 }
 
 /// Build a quaternion from an angle and a normalized axis.
-public func angleAxis(angle: Float, v: float3) -> quat {
+public func angleAxis(angle: Float, axis: float3) -> quat {
     var Result = quat()
 
     let a = angle
     let s = sin(a * Float(0.5))
 
     Result.w = cos(a * Float(0.5))
-    Result.x = v.x * s
-    Result.y = v.y * s
-    Result.z = v.z * s
+    Result.x = axis.x * s
+    Result.y = axis.y * s
+    Result.z = axis.z * s
     return Result
 }
 
@@ -429,12 +418,16 @@ public struct dquat: ArrayLiteralConvertible, CustomDebugStringConvertible {
         z = 0
         w = 1
     }
-
-    public init(_ s: Double, _ v: double3) {
+    
+    public init(w: Double, v: double3) {
         x = v.x
         y = v.y
         z = v.z
-        w = s
+        self.w = w
+    }
+    
+    public init(angle: Double, axis: double3) {
+        self = angleAxis(angle, axis: axis)
     }
 
     public init(_ w: Double, _ x: Double, _ y: Double, _ z: Double) {
@@ -449,13 +442,6 @@ public struct dquat: ArrayLiteralConvertible, CustomDebugStringConvertible {
         y = q.y
         z = q.z
         w = q.w
-    }
-
-    public init(_ v: double4) {
-        x = v.x
-        y = v.y
-        z = v.z
-        w = v.w
     }
 
     /// Initialize to a vector with elements taken from `array`.
@@ -498,11 +484,11 @@ public struct dquat: ArrayLiteralConvertible, CustomDebugStringConvertible {
         z = c.x * c.y * s.z - s.x * s.y * c.z
     }
 
-    public init(m: double3x3) {
+    public init(_ m: double3x3) {
         self.init(dquat_cast(m))
     }
 
-    public init(m: double4x4) {
+    public init(_ m: double4x4) {
         self.init(dquat_cast(m))
     }
 
@@ -518,23 +504,20 @@ prefix public func +(q: dquat) -> dquat {
 }
 
 prefix public func -(q: dquat) -> dquat {
-    return dquat(-q.x, -q.y, -q.z, -q.w)
+    return dquat( -q.w, -q.x, -q.y, -q.z)
 }
 
 public func +(q: dquat, p: dquat) -> dquat {
-    return dquat(q.x + p.x, q.y + p.y, q.z + p.z, q.w + p.w)
+    return dquat(q.w + p.w, q.x + p.x, q.y + p.y, q.z + p.z)
 }
 
-public func -(q: dquat, p: dquat) -> dquat {
-    return dquat(q.x - p.x, q.y - p.y, q.z - p.z, q.w - p.w)
-}
-
-public func *(q: dquat, p: dquat) -> dquat {
+public func *(p: dquat, q: dquat) -> dquat {
+    
     let w = p.w * q.w - p.x * q.x - p.y * q.y - p.z * q.z
     let x = p.w * q.x + p.x * q.w + p.y * q.z - p.z * q.y
     let y = p.w * q.y + p.y * q.w + p.z * q.x - p.x * q.z
     let z = p.w * q.z + p.z * q.w + p.x * q.y - p.y * q.x
-    return dquat(x, y, z, w)
+    return dquat(w, x, y, z)
 }
 
 public func *(q: dquat, v: double3) -> double3 {
@@ -558,7 +541,7 @@ public func *(v: double4, q: dquat) -> double4 {
 }
 
 public func *(q: dquat, p: Double) -> dquat {
-    return dquat(q.x * p, q.y * p, q.z * p, q.w * p)
+    return dquat(q.w * p, q.x * p, q.y * p, q.z * p)
 }
 
 public func *(p: Double, q: dquat) -> dquat {
@@ -566,7 +549,7 @@ public func *(p: Double, q: dquat) -> dquat {
 }
 
 public func /(q: dquat, p: Double) -> dquat {
-    return dquat(q.x / p, q.y / p, q.z / p, q.w / p)
+    return dquat(q.w / p, q.x / p, q.y / p, q.z / p)
 }
 
 /// Returns the normalized quaternion.
@@ -597,7 +580,8 @@ public func inverse(q: dquat) -> dquat {
 
 /// Returns dot product of q1 and q2, i.e., q1[0] * q2[0] + q1[1] * q2[1] + ...
 public func dot(q1: dquat, _ q2: dquat) -> Double {
-    return q1.x * q2.x + q1.y * q2.y + q1.z * q2.z + q1.w * q2.w
+    let tmp = double4(q1.x * q2.x, q1.y * q2.y, q1.z * q2.z, q1.w * q2.w)
+    return (tmp.x + tmp.y) + (tmp.z + tmp.w)
 }
 
 /// Spherical linear interpolation of two quaternions.
@@ -625,10 +609,6 @@ public func mix(x: dquat, _ y: dquat, _ a: Double) -> dquat {
 /// Linear interpolation of two quaternions.
 /// The interpolation is oriented.
 public func lerp(x: dquat, _ y: dquat, _ a: Double) -> dquat {
-    // Lerp is only defined in [0, 1]
-    assert(a >= Double(0))
-    assert(a <= Double(1))
-
     return x * (Double(1) - a) + (y * a)
 }
 
@@ -662,8 +642,8 @@ public func slerp(x: dquat, _ y: dquat, _ a: Double) -> dquat {
 }
 
 /// Rotates a quaternion from a vector of 3 components axis and an angle.
-public func rotate(q: dquat, _ angle: Double, _ v: double3) -> dquat {
-    var tmp = v
+public func rotate(q: dquat, angle: Double, axis: double3) -> dquat {
+    var tmp = axis
 
     // Axis of rotation must be normalised
     let len = length(tmp)
@@ -812,15 +792,15 @@ public func axis(q: dquat) -> double3 {
 }
 
 /// Build a quaternion from an angle and a normalized axis.
-public func angleAxis(angle: Double, v: double3) -> dquat {
+public func angleAxis(angle: Double, axis: double3) -> dquat {
     var Result = dquat()
 
     let a = angle
     let s = sin(a * Double(0.5))
 
     Result.w = cos(a * Double(0.5))
-    Result.x = v.x * s
-    Result.y = v.y * s
-    Result.z = v.z * s
+    Result.x = axis.x * s
+    Result.y = axis.y * s
+    Result.z = axis.z * s
     return Result
 }
